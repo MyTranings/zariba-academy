@@ -1,0 +1,135 @@
+if (condition)
+  DoSomething();
+  DoAnotherThing();
+DoDifferentThing();
+
+versus
+
+if (condition)
+{
+  DoSometing();
+}
+
+//Expected condition
+var response = GetHttpWebResponse();
+if (response.Code == Code.NotFound)
+{
+  // ...
+}
+else
+{
+  if (response.Code == Code.OK)
+  {
+    // ...
+  }
+}
+
+//versus
+
+var response = GetHttpWebResponse();
+if (response.Code == Code.OK)
+{
+  // ...
+}
+else
+{
+  if (response.Code == Code.NotFound)
+  {
+    // ...
+  }
+}
+
+//Other examples
+if (HasErrors == true)
+{
+ ...
+}
+
+versus
+
+if (HasErrors)
+{
+ ...
+}
+
+///////
+
+if (!HasNoError)
+{
+  DoSomething();
+}
+
+if (HasErrors)
+{
+  DoSometing();
+}
+
+///////
+if (SomeCondition)
+{
+  var p = GetSomePerson();
+  p.SendMail();
+  p.SendSms();
+}
+else
+{
+  var p = GetOtherPerson();
+  p.SendMail();
+  p.SendSms();
+}
+
+versus
+
+Person p = null;
+if (SomeCondition)
+{
+  p = GetSomePerson();
+}
+else
+{
+  p = GetOtherPerson();
+}
+
+p.SendMail();
+p.SendSms();
+
+
+//How would you fix this?
+if (x > 0 && y > 0 && x < Width-1 && y < Height-1 &&
+  matrix[x, y] == 0 && matrix[x-1, y] == 0 &&
+  matrix[x+1, y] == 0 && matrix[x, y-1] == 0 &&
+  matrix[x, y+1] == 0 && !visited[x, y]) …
+
+//Positive expressions are easier to read
+if (IsValid)
+{
+  DoSometing();
+}
+else
+{
+  DoSometingElse();
+}
+
+versus
+
+if (!IsValid)
+{
+  DoSometingElse();
+}
+else
+{
+  DoSomething();
+}
+
+//What is wrong here?
+if (a < b && b < c || c == d)
+
+//Or here?
+while (index < 10)
+{
+  ...
+  index += 2;
+  ...
+}
+
+

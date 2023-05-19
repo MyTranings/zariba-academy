@@ -1,0 +1,86 @@
+ private static void CreateTable4Graph()
+        {
+            Graph<int> tableGraph4 = new Graph<int>();
+            for (int i = 0; i < 16; i++)
+            {
+                tableGraph4.AddVertex(i);
+            }
+
+            tableGraph4.AddUndirectedEdge(0, 1);
+            tableGraph4.AddUndirectedEdge(0, 4);
+            tableGraph4.AddUndirectedEdge(0, 5);
+
+            tableGraph4.AddUndirectedEdge(1, 2);
+            tableGraph4.AddUndirectedEdge(1, 4);
+            tableGraph4.AddUndirectedEdge(1, 5);
+            tableGraph4.AddUndirectedEdge(1, 6);
+
+            tableGraph4.AddUndirectedEdge(2, 3);
+            tableGraph4.AddUndirectedEdge(2, 5);
+            tableGraph4.AddUndirectedEdge(2, 6);
+            tableGraph4.AddUndirectedEdge(2, 7);
+
+            tableGraph4.AddUndirectedEdge(3, 6);
+            tableGraph4.AddUndirectedEdge(3, 7);
+
+            tableGraph4.AddUndirectedEdge(4, 5);
+            tableGraph4.AddUndirectedEdge(4, 8);
+            tableGraph4.AddUndirectedEdge(4, 9);
+
+            tableGraph4.AddUndirectedEdge(5, 6);
+            tableGraph4.AddUndirectedEdge(5, 8);
+            tableGraph4.AddUndirectedEdge(5, 9);
+            tableGraph4.AddUndirectedEdge(5, 10);
+
+            tableGraph4.AddUndirectedEdge(6, 7);
+            tableGraph4.AddUndirectedEdge(6, 9);
+            tableGraph4.AddUndirectedEdge(6, 10);
+            tableGraph4.AddUndirectedEdge(6, 11);
+
+            tableGraph4.AddUndirectedEdge(7, 10);
+            tableGraph4.AddUndirectedEdge(7, 11);
+
+            tableGraph4.AddUndirectedEdge(8, 9);
+            tableGraph4.AddUndirectedEdge(8, 12);
+            tableGraph4.AddUndirectedEdge(8, 13);
+
+            tableGraph4.AddUndirectedEdge(9, 10);
+            tableGraph4.AddUndirectedEdge(9, 12);
+            tableGraph4.AddUndirectedEdge(9, 13);
+            tableGraph4.AddUndirectedEdge(9, 14);
+
+            tableGraph4.AddUndirectedEdge(10, 11);
+            tableGraph4.AddUndirectedEdge(10, 13);
+            tableGraph4.AddUndirectedEdge(10, 14);
+            tableGraph4.AddUndirectedEdge(10, 15);
+
+            tableGraph4.AddUndirectedEdge(11, 14);
+            tableGraph4.AddUndirectedEdge(11, 15);
+
+            tableGraph4.AddUndirectedEdge(12, 13);
+
+            tableGraph4.AddUndirectedEdge(13, 14);
+
+            tableGraph4.AddUndirectedEdge(14, 15);
+
+            var allPaths = tableGraph4.GetAllPaths();
+            StringBuilder allPathsAsSB = new StringBuilder();
+            foreach (var value in allPaths.Values)
+            {
+                foreach (var vertexList in value)
+                {
+                    if (vertexList.Count>=3 && vertexList.Count<=10)
+                    {
+                        foreach (var vertex in vertexList)
+                        {
+                            allPathsAsSB.Append(vertex.Value);
+                            allPathsAsSB.Append(" ");
+                        }
+                        allPathsAsSB.AppendLine();
+                    }   
+                }
+            }
+
+            string allPathsAsString = allPathsAsSB.ToString();
+            File.WriteAllText("AllPaths.txt", allPathsAsString);
+        }
