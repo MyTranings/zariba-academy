@@ -1,0 +1,37 @@
+//What is this code going to do
+int value;
+Console.WriteLine(value);
+
+//What is wrong here
+return days * hoursPerDay * ratePerHour;
+
+//Which of the two is better
+for (int i=0; i<xCoords.length; i++) {
+  for (int j=0; j<yCoords.length; j++) {
+    matrix[i][j] = 
+      matrix[xCoords[findMax(i)+1]][yCoords[findMin(j)-1]] *
+      matrix[yCoords[findMax(j)+1]][xCoords[findMin(i)-1]];
+  }
+}
+
+or
+
+for (int i = 0; i < xCoords.length; i++)
+{
+  for (int j = 0; j < yCoords.length; j++)
+  {
+    int maxStartIndex = findMax(i) + 1;
+    int minStartIndex = findMin(i) - 1;
+    int minXcoord = xCoords[minStartIndex];
+    int maxXcoord = xCoords[maxStartIndex];
+    int minYcoord = yCoords[minStartIndex];
+    int maxYcoord = yCoords[maxStartIndex];
+    int newValue = 
+      matrix[maxXcoord][minYcoord] *
+      matrix[maxYcoord][minXcoord];
+    matrix[i][j] = newValue;
+  }
+}
+
+double perimeter = 6.28318412 * radius;
+double perimeter = 2 * PI * radius;

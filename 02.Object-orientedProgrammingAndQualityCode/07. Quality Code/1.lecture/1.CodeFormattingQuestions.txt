@@ -1,0 +1,52 @@
+//Bad Code Formatting
+public   const    string                    FILE_NAME
+="example.bin"  ;  static void Main   (             ){
+FileStream   fs=     new FileStream(FILE_NAME,FileMode
+.   CreateNew)   // Create the writer      for data  .
+;BinaryWriter w=new BinaryWriter     (    fs      );// Write data to                               Test.data.
+for(  int i=0;i<11;i++){w.Write((int)i);}w   .Close();
+fs   .   Close  (  ) // Create the reader    for data.
+;fs=new FileStream(FILE_NAME,FileMode.            Open
+,  FileAccess.Read)     ;BinaryReader                r
+= new BinaryReader(fs);  // Read data from  Test.data.
+ for (int i = 0; i < 11; i++){ Console      .WriteLine
+(r.ReadInt32                                       ())
+;}r       .    Close   (   );  fs .  Close  (  )  ;  }
+
+//What are the mistakes here
+public class Factorial
+{
+  private static ulong CalcFactorial( uint num,int anotherNum )
+  {
+    if (num == 0)
+      return 1;
+    else
+      return num * CalcFactorial(num - 1);
+  }
+  static void Main()
+  {
+    ulong factorial = CalcFactorial(5);
+    Console.WriteLine(factorial);
+  }
+}
+
+//Empty lines between logically separated sequences
+private List<Report> PrepareReports()
+{
+    List<Report> reports = new List<Report>();
+
+  // Create incomes reports
+  Report incomesSalesReport = PrepareIncomesSalesReport();
+  reports.Add(incomesSalesReport);
+  Report incomesSupportReport = PrepareIncomesSupportReport();
+  reports.Add(incomesSupportReport);
+
+  // Create expenses reports
+  Report expensesPayrollReport = PrepareExpensesPayrollReport();
+  reports.Add(expensesPayrollReport);
+  Report expensesMarketingReport = PrepareExpensesMarketingReport();
+  reports.Add(expensesMarketingReport);
+
+  return reports;
+}
+

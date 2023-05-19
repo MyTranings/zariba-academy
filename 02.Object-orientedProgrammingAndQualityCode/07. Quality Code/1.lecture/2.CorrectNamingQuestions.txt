@@ -1,0 +1,76 @@
+scrpCnt vs. scriptsCount
+dtbgRegExPtrn vs. dateTimeBulgarianRegExPattern
+
+//good or bad?
+FactorialCalculator, studentsCount, 
+k, k2, k3, junk, f33, KJJ, button1, variable, 
+Math.PI, configFileName, CreateReport,
+temp, tmp, temp_var, something, someValue
+
+RecursiveFactorialCalculator() vs recursiveFactorialCalculator()
+
+//Naming classes and structs - good or bad?
+Student, FileSystem, BinaryTreeNode, Move, FindUsers, Fast, ExtremlyFast
+Constants, MathUtils, CheckBox, Calendar, Optimize, Check,  FastFindInDatabase
+
+//Naming interfaces
+IDataReader, IList, IHttpModule, ICommandExecutor
+List, iFindUsers, IFast, IMemoryOptimize, Optimizer, FastFindInDatabase
+
+//Naming enums
+enum AppState vs enum PAge_ForMat
+
+//Method naming
+Method1, FindStudent, DoSomething, HandleStuff, LoadReport, Sinus,
+SampleMethod, DirtyHack, Student, Generator, Show, LoadSettingsFile
+CreateMonthlyAndAnnualIncomesReport, CreateMonthIncReport
+
+//Variable naming
+firstName, report, config, foo, bar, p, p1, p2, populate, LastName
+_firtName, __temp, createUserSqlCommand
+
+accounts, customers, paymentsPriorityQueue, playersArray
+accountHolder, paymentPlan, vipPlayer, customersHashtable
+
+//Booleans
+hasPendingPayment, customerFound, validAddress, notFound, findCustomerById, player, 
+programStop, run, list, positiveBalance, isPrime
+
+// Swap a[i] and a[j]
+int temp = a[i];
+a[i] = a[j];
+a[j] = temp;
+
+versus
+
+// Swap a[i] and a[j]
+int oldValue = a[i];
+a[i] = a[j];
+a[j] = oldValue;
+
+
+class LinkedList {
+  public int flag { get; set; }
+}
+class Student {
+  public string lastName;
+}
+class Student {
+  private int i;
+}
+
+//constants
+public const int MAX = 512; // Max what? Apples or Oranges?
+public const int BUF256 = 256; // What about BUF256 = 1024?
+public const string GREATER = "&gt;"; // GREATER_HTML_ENTITY
+public const int FONT_SIZE = 16; // 16pt or 16px?
+public const PageSize PAGE = PageSize.A4; // Maybe PAGE_SIZE?
+private const int FONT_SIZE_IN_POINTS = 16;
+public static readonly PageSize DefaultPageSize = PageSize.A4;
+
+//Special cases
+RS232Port, COM3, Display@2Protein
+
+
+
+

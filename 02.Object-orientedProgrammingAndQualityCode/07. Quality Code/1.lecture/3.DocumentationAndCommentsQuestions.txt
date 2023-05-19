@@ -1,0 +1,127 @@
+// Create new list of integers
+    List<int> primesList = new List<int>();
+    // Perform a loop from start to end
+    for (int num = start; num <= end; num++)
+    {
+        // Declare boolean variable, initially true
+        bool prime = true;
+        // Perform loop from 2 to sqrt(num)
+        for (int div = 2; div <= Math.Sqrt(num); div++)
+        {
+            // Check if div divides num with no remainder 
+            if (num % div == 0)
+            {
+                // We found a divider -> the number is not prime
+                prime = false;
+                // Exit from the loop
+                break;
+            }
+          // Continue with the next loop value
+        }
+        // Check if the number is prime
+        if (prime)
+        {
+            // Add the number to the list of primes
+            primesList.Add(num);
+        }
+    }
+    // Return the list of primes
+    return primesList;
+	
+	
+	versus
+	
+	
+	public static List<int> FindPrimes(int start, int end)
+{
+  List<int> primesList = new List<int>();
+  for (int num = start; num <= end; num++)
+  {
+    bool isPrime = IsPrime(num);
+    if (isPrime)
+    {
+      primesList.Add(num);
+    }
+  }
+  return primesList;
+}
+
+
+//Bad programming style
+while (j <= num)
+{
+        meetsCriteria[j] = false;
+        j = j + i;
+    }
+}
+
+//Good programming style
+for (int factor = 2; factor < (num / 2); factor++)
+{
+    int factorableNumber = factor + factor;
+    while (factorableNumber <= num)
+    {
+        isPrime[factorableNumber] = false;
+        factorableNumber = factorableNumber + factor;
+    }
+}
+
+//Misleading comments
+
+// write out the sums 1..n for all n from 1 to num   
+current = 1;
+previous = 0; 
+sum = 1;   
+for (int i = 0; i < num; i++)
+{   
+   Console.WriteLine( "Sum = " + sum );   
+   sum = current + previous;   
+   previous = current;   
+   current = sum;
+} 
+
+//Obvious comments
+// set product to "base" 
+product = base; 
+ 
+// loop from 2 to "num" 
+for ( int i = 2; i <= num; i++ )
+{ 
+   // multiply "base" by "product"  
+   product = product * base; 
+} 
+Console.WriteLine( "Product = " + product );
+
+
+//Bad code - needs to be rewritten
+
+// compute the square root of Num using
+// the Newton-Raphson approximation 
+r = num / 2; 
+while (abs(r - (num/r)) > TOLERANCE)
+{ 
+   r = 0.5 * (r + (num/r) ); 
+} 
+Console.WriteLine( "r = " + r ); 
+
+//Hard to maintain
+
+//  Variable            Meaning 
+//  --------            ------- 
+//  xPos .............. X coordinate position (in meters) 
+//  yPos .............. Y coordinate position (in meters)
+//  zPos .............. Z coordinate position (in meters)
+//  radius ............ The radius of the sphere where the
+                        battle ship is located (in meters)
+//  distance .......... The distance from the start position
+                        (in meters)
+
+						
+//Use Summary
+
+/// <summary>
+/// This class performs an important function.
+/// </summary>
+public class MyClass { }
+
+
