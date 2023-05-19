@@ -1,4 +1,4 @@
-﻿// 6. Print the numbers 0, 357, -20 and 10^20 on the console.
+﻿// 3. Print the numbers 0, 357, -20 and 10^20 on the console.
 
 using System;
 

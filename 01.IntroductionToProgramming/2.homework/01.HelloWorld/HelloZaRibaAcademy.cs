@@ -1,4 +1,4 @@
-﻿// 4. Create, compile and run a ?Hello Zariba Academy? console application.
+﻿// 1. Create, compile and run a ?Hello Zariba Academy? console application.
 
 using System;
 

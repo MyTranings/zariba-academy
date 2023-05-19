@@ -1,4 +1,4 @@
-﻿// 10. Write a program to read your first and last names and print them on the console, separated by space.
+﻿// 6. Write a program to read your first and last names and print them on the console, separated by space.
 
 using System;
 

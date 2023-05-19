@@ -1,4 +1,4 @@
-﻿// 8. Print 56 to the power 3
+﻿// 4. Print 56 to the power 3
 
 using System;
 
